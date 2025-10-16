@@ -1,70 +1,81 @@
 body {
-	font-family: "Arial", sans-serif;
-	background-image: url(RRC.jpg);
-	background-repeat: no-repeat;
-    background-position: auto;
+  font-family: "Arial", sans-serif;
+  background-image: url("RRC.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-form {
-	width: 80%;
-	max-width: 20;
-	background: white;
-	padding: 2em;
-	border-radius: 1em;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	text-align: center;
-}
-
-input,
-select,
-textarea {
-	width: 100%;
-	padding: 0.4em;
-	margin-top: 0.2em;
-	margin-bottom: 1.2em;
-	border: 0.1px solid #ddd;
-	border-radius: 0.5em;
-}
-
-button {
-	padding: 0.625em 1.25em;
-	background-color: #008cba;
-	color: white;
-	border: none;
-	border-radius: 0.3125em;
-	cursor: pointer;
-    align-self: center;
-}
-
-button:hover {
-	background-color: #005f73;
-}
-
-#userForm {
+.form-container {
   background-color: skyblue;
-  padding: 2%;
-  margin: auto;
-  max-width: 500px;
+  padding: 2em;
   border-radius: 20px;
-  margin-top: 50px;
-  
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.remember-options {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.remember-options label {
+  display: inline-block;
+  margin: 5px 10px;
+  font-size: 0.9em;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #005f73;
 }
 
 .error-message {
-	color: red;
-	font-size: 0.9em;
-	margin-top: 5px;
-	margin-bottom: 10px;
-	display: block;
-	visibility: hidden;
-}
-
-.error-visible {
-	visibility: visible;
-}
-
-footer { 
-    text-align: center;
-    color: white;
-
+  color: red;
+  text-align: center;
+  margin-top: 10px;
 }

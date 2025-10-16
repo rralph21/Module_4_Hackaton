@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles.css" />
-		<title>Event Registration Form</title>
-	</head>
-	<body>
-		<form id="userForm">
-            <h3>Register here</h3>
-	        <label for="username">Username:</label>
-	        <input type="text" id="username" name="username" />
-            <span id="userNameError" class="error-message" aria-live="polite"></span>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-	        
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form id="userForm" action="http://127.0.0.1:5500/index.html/post" method="POST">
+        <h2>Register Here</h2>
 
-            <input type="submit" value="Submit" />
+        <div class="input-row">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required/>
 
-        <fieldset>
-            <legend>Remember me</legend>
-            <input type="checkbox" id="Username" name="username" value="Username" />
-            <label for="Username">Username</label><br />
-            <input type="checkbox" id="Password" name="password" value="Password" />
-            <label for="Password">Password</label><br />
-            <input type="checkbox" id="Username & Password" name="both" value="Username & Password" />
-            <label for="Username & Password">Username & Password</label>
-        </fieldset>
-        </form>
-       
-		<script src="script.js"></script>
-	</body>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required/>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+          <input type="submit" value="Submit" />
+        </div>
+
+        <h3>Remember Me</h3>
+        <div class="remember-options">
+          <label>
+            <input type="checkbox" id="rememberUsername" value="username" />
+            Username
+          </label>
+          <label>
+            <input type="checkbox" id="rememberPassword" value="password" />
+            Password
+          </label>
+          <label>
+            <input type="checkbox" id="rememberBoth" value="both" />
+            Both
+          </label>
+        </div>
+
+        <p id="errorMessage" class="error-message"></p>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
