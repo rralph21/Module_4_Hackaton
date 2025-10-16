@@ -10,13 +10,25 @@
 		<form id="userForm">
 	        <label for="username">Username:</label>
 	        <input type="text" id="username" name="username" />
+            <span id="userNameError" class="error-message" aria-live="polite"></span>
             
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">
 	        
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" />
+
+        <fieldset>
+            <legend>Remember me</legend>
+            <input type="checkbox" id="Username" name="username" value="Username" />
+            <label for="Username">Username</label><br />
+            <input type="checkbox" id="Password" name="password" value="Password" />
+            <label for="Password">Password</label><br />
+            <input type="checkbox" id="Username & Password" name="both" value="Username & Password" />
+            <label for="Username & Password">Username & Password</label>
+        </fieldset>
         </form>
+      
 		<script src="script.js"></script>
 	</body>
 </html>
